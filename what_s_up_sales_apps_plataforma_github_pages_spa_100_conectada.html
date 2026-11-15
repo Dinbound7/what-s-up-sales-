@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<title>What's Up Sales Apps · D'inbound Marketing</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFBF7',
+              white: '#FFFFFF',
+              black: '#0D0E12',
+              dark: '#14171F',
+              card: '#1A1E29',
+              orange: '#EA580C',
+              orangeHover: '#C2410C',
+              gold: '#D4AF37',
+              goldLight: '#F5E6BE'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #0D0E12;
+      color: #FDFBF7;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF1D0 0%, #D4AF37 50%, #AA8010 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border {
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+    .page-section {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+    .page-section.active {
+      display: block;
+      opacity: 1;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</link></head>
+<body class="min-h-screen flex flex-col bg-brand-black text-brand-cream selection:bg-brand-orange selection:text-white pb-20 md:pb-0">
+<!-- TOP BAR / HEADER -->
+<header class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-white/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- LOGO -->
+<a class="flex items-center gap-3.5 group cursor-pointer" href="#inicio" onclick="navigateTo('inicio'); return false;">
+<div class="w-12 h-12 rounded-xl bg-black border gold-border flex items-center justify-center p-1.5 shadow-lg shadow-black/50 overflow-hidden flex-shrink-0">
+<img alt="Logo D'inbound Marketing" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDZ9ThXaBmtZ0SXnmNe4lzLc5lwW9MzdEAAHbpZ2v9IGVGedRHmmjv3-6Q9yCJjuSdU2Acns1mBLE5zU2AEYs8pcQdISGnBhd_HMRzdHlDjssLmTFe5G8QVaiVYgITLJwnTwFBBwXTRk9IxlEaiEUA7B7qeUDDrQjGEZJFBpcq5DChHVMHdMBw4luu4iHZ37xGsjx66V4On7q98R8lAkgpT-cis6E3wPLYp52h0Q224_uO9QdJrpjER';" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-display font-bold text-base sm:text-lg tracking-wider text-white group-hover:text-brand-orange transition-colors">
+            WHAT'S UP SALES APPS
+          </span>
+<span class="text-[10px] sm:text-xs uppercase tracking-widest gold-gradient-text font-semibold">
+            D'inbound Marketing · Dennys Douglas
+          </span>
+</div>
+</a>
+<!-- DESKTOP NAV -->
+<nav class="hidden md:flex items-center gap-7 text-sm font-medium">
+<button class="nav-btn text-brand-orange font-bold transition-colors" id="nav-inicio" onclick="navigateTo('inicio')">
+          Inicio
+        </button>
+<button class="nav-btn text-gray-300 hover:text-brand-gold transition-colors" id="nav-agencia" onclick="navigateTo('agencia')">
+          D'inbound Marketing
+        </button>
+<button class="nav-btn text-gray-300 hover:text-brand-gold transition-colors" id="nav-keepup" onclick="navigateTo('keepup')">
+          Keep Up
+        </button>
+<button class="nav-btn text-gray-300 hover:text-brand-gold transition-colors" id="nav-academia" onclick="navigateTo('academia')">
+          D'inbound Academy
+        </button>
+<button class="nav-btn text-gray-300 hover:text-brand-gold transition-colors" id="nav-tienda" onclick="navigateTo('tienda')">
+          Tienda
+        </button>
+</nav>
+<!-- CTA WHATSAPP -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white px-4 sm:px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-brand-orange/20 hover:scale-105 active:scale-95" href="https://wa.me/523223190424?text=Hola%20Dennys%20Douglas,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20What's%20Up%20Sales%20Apps" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="hidden sm:inline">WhatsApp: 322 319 0424</span>
+<span class="sm:hidden">WhatsApp</span>
+</a>
+</div>
+</div>
+</header>
+<!-- CONTENEDOR PRINCIPAL SPA -->
+<main class="flex-1">
+<!-- 1. PÁGINA: INICIO -->
+<section class="page-section active" id="page-inicio">
+<div class="relative pt-10 pb-20 md:py-24 border-b border-white/5 overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,88,12,0.12),transparent_50%)]"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card border gold-border text-xs tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+<span class="gold-gradient-text font-bold">Top #1 Bestseller en Estrategia Comercial</span>
+</div>
+<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                ¿Y tus ventas qué? <br/>
+<span class="gold-gradient-text">What's Up With Your Sales?</span>
+</h1>
+<p class="text-xl font-medium text-brand-orange">
+                Don't lose your street smarts!
+              </p>
+<p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                Bienvenido a la plataforma definitiva de negociación, inbound marketing y cierre táctico por <strong>Dennys Douglas</strong>. Transforma el flujo de prospectos de tu organización en rentabilidad blindada.
+              </p>
+<div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10 max-w-lg">
+<div>
+<p class="text-2xl sm:text-3xl font-display font-bold text-white">97.8%</p>
+<p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Efectividad</p>
+</div>
+<div>
+<p class="text-2xl sm:text-3xl font-display font-bold text-white">6 Módulos</p>
+<p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Video Pro</p>
+</div>
+<div>
+<p class="text-2xl sm:text-3xl font-display font-bold text-white">+1,400</p>
+<p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Alumnos</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white px-7 py-3.5 rounded-xl font-bold text-base transition-all shadow-xl shadow-brand-orange/25 hover:scale-105 active:scale-95 cursor-pointer" onclick="navigateTo('tienda')">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Comprar Libro ($17 USD)</span>
+</button>
+<button class="inline-flex items-center gap-2 bg-brand-card hover:bg-white/10 border gold-border text-brand-cream px-6 py-3.5 rounded-xl font-semibold text-base transition-all hover:scale-105 active:scale-95 cursor-pointer" onclick="navigateTo('academia')">
+<span class="material-symbols-outlined text-brand-gold">school</span>
+<span>Ir a la Academia</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-sm rounded-2xl bg-brand-card border gold-border p-6 shadow-2xl shadow-black/80 text-center">
+<div class="rounded-xl overflow-hidden shadow-2xl border border-white/10 mb-6 bg-black flex justify-center items-center">
+<img alt="Portada Oficial What's Up With Your Sales?" class="w-full h-auto max-h-[420px] object-contain" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAyN13bnjFENFZMP1dS_9P7t-I1lWSLR66uZ976eCaFiIYvaph7fuXCSpZdAI_yuucUs6qh9n6vUBZ4_DC9LVbVMQiE_gwfSBrmiVDVlURA1sDfLN051ygseGw598diUVsCyhyD1Jp7CpRuOKkrG-R8AgOF9foJoOtK71uLQOGOUgBM7gxSnN8BeThwZ_BIy5CmEyxDLvs-jYWLvgWR83wyjtf4uv6sKJ1yDGDUCxhjd2kcFEl653z8';" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<h3 class="text-xl font-display font-bold text-white mb-1">Edición Oficial 2026</h3>
+<p class="text-sm text-gray-400 mb-4">El manual definitivo de algoritmos conversacionales y relaciones públicas comerciales.</p>
+<div class="flex items-center justify-center gap-3">
+<a class="flex-1 bg-brand-orange hover:bg-brand-orangeHover text-white py-2.5 rounded-lg text-sm font-bold transition-colors shadow" href="https://mpago.li/2muarZ1" rel="noopener noreferrer" target="_blank">
+                    Mercado Pago ($17)
+                  </a>
+<a class="flex-1 bg-black hover:bg-brand-dark border border-white/20 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors" href="https://a.co/d/00yxhmBZ" rel="noopener noreferrer" target="_blank">
+                    Amazon ($13)
+                  </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. PÁGINA: D'INBOUND MARKETING (AGENCIA) -->
+<section class="page-section py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="page-agencia">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest gold-gradient-text font-bold">Agencia &amp; Consultoría Estratégica</span>
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">D'inbound Marketing</h2>
+<p class="text-gray-400 mt-4 text-base">
+          Desarrollo de ecosistemas comerciales, relaciones públicas de alto calibre y adquisición táctica de clientes en Guadalajara, Jalisco y Riviera Nayarit.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<div class="bg-brand-card border gold-border rounded-2xl p-8 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="material-symbols-outlined text-brand-orange text-4xl mb-4">trending_up</span>
+<h3 class="text-xl font-bold text-white mb-2">Inbound Sales B2B</h3>
+<p class="text-sm text-gray-300 leading-relaxed">
+            Metodología estructurada para calificar prospectos fríos y guiarlos hacia transacciones de alto ticket mediante contenido de valor y autoridad.
+          </p>
+</div>
+<div class="bg-brand-card border gold-border rounded-2xl p-8 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="material-symbols-outlined text-brand-gold text-4xl mb-4">campaign</span>
+<h3 class="text-xl font-bold text-white mb-2">Relaciones Públicas</h3>
+<p class="text-sm text-gray-300 leading-relaxed">
+            Protocolos de vocería de marca, control de reputación comercial y apertura de alianzas institucionales en sectores competitivos.
+          </p>
+</div>
+<div class="bg-brand-card border gold-border rounded-2xl p-8 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="material-symbols-outlined text-brand-orange text-4xl mb-4">groups</span>
+<h3 class="text-xl font-bold text-white mb-2">Entrenamiento Comercial</h3>
+<p class="text-sm text-gray-300 leading-relaxed">
+            Talleres presenciales e in-company para directores de venta, cerradores y ejecutivos de cuenta con roleplays en tiempo real.
+          </p>
+</div>
+</div>
+<div class="bg-brand-card border gold-border rounded-2xl p-8 text-center max-w-2xl mx-auto shadow-2xl">
+<h3 class="text-2xl font-display font-bold text-white mb-3">Agenda una Asesoría Estratégica Directa</h3>
+<p class="text-gray-400 text-sm mb-6">Platica personalmente con Dennys Douglas sobre el plan comercial de tu organización.</p>
+<a class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-xl hover:scale-105 active:scale-95 transition-all" href="https://wa.me/523223190424?text=Hola%20Dennys,%20solicito%20una%20consultor%C3%ADa%20con%20D'inbound%20Marketing" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+<span>Contactar a Dennys Douglas (322 319 0424)</span>
+</a>
+</div>
+</section>
+<!-- 3. PÁGINA: KEEP UP (BLOG & PODCAST) -->
+<section class="page-section py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="page-keepup">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest text-brand-orange font-bold">Publicación Táctica Periódica</span>
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">Keep Up · Recursos y Soluciones</h2>
+<p class="text-gray-400 mt-4 text-base">
+          Artículos, podcasts y algoritmos conversacionales para mantener la agilidad mental en la negociación moderna.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<div class="bg-brand-card border gold-border rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-xs font-bold uppercase">Podcast Táctico</span>
+<span class="text-xs text-gray-400">2 min audio</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Desarmando la objeción de precio en 3 jugadas</h3>
+<p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Aprende cómo cambiar el foco de costo a costo de inacción antes de que el comprador compare con alternativas más baratas.
+            </p>
+</div>
+<button class="inline-flex items-center gap-2 bg-white/5 hover:bg-brand-orange hover:text-white text-brand-gold px-4 py-2.5 rounded-xl font-bold text-sm transition-all border border-white/10 w-fit" onclick="playAudioSnippet()">
+<span class="material-symbols-outlined">play_circle</span>
+<span id="podcast-status">Escuchar audio de 2 minutos</span>
+</button>
+</div>
+<div class="bg-brand-card border gold-border rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold uppercase">Artículo RRPP</span>
+<span class="text-xs text-gray-400">Lectura 4 min</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">El arte de caerle bien al prospecto escéptico</h3>
+<p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Reglas de etiqueta, vocería de valor y cómo evitar el lenguaje corporativo cliché que arruina las primeras impresiones comerciales.
+            </p>
+</div>
+<button class="inline-flex items-center gap-2 bg-brand-orange/15 hover:bg-brand-orange text-brand-orange hover:text-white px-4 py-2.5 rounded-xl font-bold text-sm transition-all border border-brand-orange/30 w-fit" onclick="navigateTo('academia')">
+<span class="material-symbols-outlined">read_more</span>
+<span>Ver lección relacionada en la Academia</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. PÁGINA: D'INBOUND ACADEMY -->
+<section class="page-section py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="page-academia">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest gold-gradient-text font-bold">Programa Oficial en Video</span>
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">D'inbound Academy</h2>
+<p class="text-gray-400 mt-4 text-base">
+          6 módulos tácticos estructurados para dominar la prospección, el diagnóstico, la vocería y el cierre irrevocable.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="text-brand-gold font-bold text-xs uppercase tracking-wider">Módulo 01</span>
+<h3 class="text-lg font-bold text-white mt-1 mb-2">Prospección Quirúrgica</h3>
+<p class="text-xs text-gray-300 leading-relaxed mb-4">Filtrado estricto de cuentas y algoritmos para llegar a decisores sin intermediarios.</p>
+<span class="text-xs text-brand-orange font-semibold">8 Lecciones · Video HD</span>
+</div>
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="text-brand-gold font-bold text-xs uppercase tracking-wider">Módulo 02</span>
+<h3 class="text-lg font-bold text-white mt-1 mb-2">Diagnóstico de Necesidades</h3>
+<p class="text-xs text-gray-300 leading-relaxed mb-4">Preguntas de profundidad para revelar el dolor económico real detrás de la solicitud.</p>
+<span class="text-xs text-brand-orange font-semibold">6 Lecciones · Video HD</span>
+</div>
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="text-brand-gold font-bold text-xs uppercase tracking-wider">Módulo 03</span>
+<h3 class="text-lg font-bold text-white mt-1 mb-2">Psicología &amp; Lenguaje Táctico</h3>
+<p class="text-xs text-gray-300 leading-relaxed mb-4">Control del ritmo conversacional y eliminación del tono de vendedor tradicional.</p>
+<span class="text-xs text-brand-orange font-semibold">7 Lecciones · Video HD</span>
+</div>
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="text-brand-gold font-bold text-xs uppercase tracking-wider">Módulo 04</span>
+<h3 class="text-lg font-bold text-white mt-1 mb-2">Presentación de Alto Valor</h3>
+<p class="text-xs text-gray-300 leading-relaxed mb-4">Estructura de propuestas comerciales diseñadas para anular comparaciones de precio.</p>
+<span class="text-xs text-brand-orange font-semibold">5 Lecciones · Video HD</span>
+</div>
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="text-brand-gold font-bold text-xs uppercase tracking-wider">Módulo 05</span>
+<h3 class="text-lg font-bold text-white mt-1 mb-2">Gestión de Crisis &amp; Objeciones</h3>
+<p class="text-xs text-gray-300 leading-relaxed mb-4">Semáforo de reputación y rescate de negociaciones bloqueadas por desconfianza.</p>
+<span class="text-xs text-brand-orange font-semibold">6 Lecciones · Video HD</span>
+</div>
+<div class="bg-brand-card border border-white/10 rounded-2xl p-6 hover:border-brand-orange transition-all hover:-translate-y-1">
+<span class="text-brand-gold font-bold text-xs uppercase tracking-wider">Módulo 06</span>
+<h3 class="text-lg font-bold text-white mt-1 mb-2">Cierre &amp; Relaciones Públicas</h3>
+<p class="text-xs text-gray-300 leading-relaxed mb-4">Firma de contrato, onboarding impecable y recompra perpetua con referidos automáticos.</p>
+<span class="text-xs text-brand-orange font-semibold">9 Lecciones · Video HD</span>
+</div>
+</div>
+<div class="text-center">
+<a class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-xl hover:scale-105 active:scale-95 transition-all" href="https://wa.me/523223190424?text=Hola%20Dennys,%20deseo%20activar%20mi%20acceso%20a%20la%20Academia%20D'inbound" target="_blank">
+<span class="material-symbols-outlined">lock_open</span>
+<span>Solicitar Acceso Completo a la Academia</span>
+</a>
+</div>
+</section>
+<!-- 5. PÁGINA: TIENDA OFICIAL -->
+<section class="page-section py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="page-tienda">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-widest gold-gradient-text font-bold">Catálogo Oficial</span>
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">
+          Elige tu formato y cómpralo hoy
+        </h2>
+<p class="text-gray-400 mt-4 text-base">
+          Garantía de entrega inmediata y acceso prioritario a la comunidad de ventas de D'inbound.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- MERCADO PAGO -->
+<div class="rounded-2xl bg-brand-card border-2 border-brand-orange p-8 flex flex-col justify-between relative shadow-2xl shadow-brand-orange/10">
+<span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
+            Recomendado
+          </span>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-brand-orange text-3xl">auto_stories</span>
+<span class="text-3xl font-display font-extrabold text-white">$17 <span class="text-sm font-normal text-gray-400">USD</span></span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Pack Oficial Mercado Pago</h3>
+<p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Acceso directo al libro digital, material táctico complementario y canal exclusivo de seguimiento por WhatsApp.
+            </p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-orange text-sm">check_circle</span>
+<span>Descarga inmediata asegurada</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-orange text-sm">check_circle</span>
+<span>Pasarela segura con Mercado Pago</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-orange text-sm">check_circle</span>
+<span>Atención directa por WhatsApp</span>
+</li>
+</ul>
+</div>
+<a class="w-full text-center bg-brand-orange hover:bg-brand-orangeHover text-white py-3.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-orange/20 hover:scale-105 active:scale-95 block" href="https://mpago.li/2muarZ1" rel="noopener noreferrer" target="_blank">
+            Comprar por $17 USD (Mercado Pago)
+          </a>
+</div>
+<!-- AMAZON E-BOOK -->
+<div class="rounded-2xl bg-brand-card border gold-border p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-brand-gold text-3xl">tablet_android</span>
+<span class="text-3xl font-display font-extrabold text-white">$13 <span class="text-sm font-normal text-gray-400">USD</span></span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Amazon Kindle E-Book</h3>
+<p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Lee en cualquier momento desde tu Kindle, iPad, tablet o smartphone en formato digital optimizado.
+            </p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+<span>Sincronización WhisperSync</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+<span>Lectura instantánea tras la compra</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+<span>Disponible en todo el mundo</span>
+</li>
+</ul>
+</div>
+<a class="w-full text-center bg-black hover:bg-brand-card border border-white/20 text-white py-3.5 rounded-xl font-bold text-sm transition-all hover:scale-105 active:scale-95 block" href="https://www.amazon.com/kindle-dbs/ku2?passThroughAsin=B0HPF5WJ33&amp;ref=dbs_p_ebk_r00_pbcb_diupu0" rel="noopener noreferrer" target="_blank">
+            Ver E-book en Amazon ($13 USD)
+          </a>
+</div>
+<!-- AMAZON TAPA BLANDA -->
+<div class="rounded-2xl bg-brand-card border gold-border p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-brand-gold text-3xl">menu_book</span>
+<span class="text-3xl font-display font-extrabold text-white">$13 <span class="text-sm font-normal text-gray-400">USD</span></span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Edición Física Tapa Blanda</h3>
+<p class="text-sm text-gray-300 leading-relaxed mb-6">
+              El libro impreso de alta calidad para subrayar, tomar notas tácticas y tenerlo siempre en tu escritorio.
+            </p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+<span>Envío directo a tu puerta con Amazon</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+<span>Garantía de impresión y entrega</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+<span>Ideal para equipos comerciales</span>
+</li>
+</ul>
+</div>
+<a class="w-full text-center bg-black hover:bg-brand-card border border-white/20 text-white py-3.5 rounded-xl font-bold text-sm transition-all hover:scale-105 active:scale-95 block" href="https://a.co/d/00yxhmBZ" rel="noopener noreferrer" target="_blank">
+            Ver Tapa Blanda en Amazon ($13 USD)
+          </a>
+</div>
+</div>
+</section>
+<!-- FORMULARIO DE REGISTRO GRATIS (PERSISTENTE / GLOBAL) -->
+<section class="py-16 bg-brand-card border-y border-white/10">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8">
+<span class="text-xs uppercase tracking-widest text-brand-orange font-bold">Acceso Exclusivo Sin Costo</span>
+<h2 class="text-2xl sm:text-3xl font-display font-bold text-white mt-1">
+            Subscríbete gratis aquí:
+          </h2>
+<p class="text-gray-400 text-sm mt-2">
+            Recibe el capítulo introductorio de cortesía y las actualizaciones periódicas de Dennys Douglas.
+          </p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-3 gap-4" onsubmit="handleSubscription(event)">
+<div>
+<label class="block text-xs uppercase font-semibold text-gray-400 mb-1">Nombre</label>
+<input class="w-full bg-brand-black border border-white/20 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange transition-colors" id="sub-name" placeholder="Tu nombre completo" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-semibold text-gray-400 mb-1">Correo</label>
+<input class="w-full bg-brand-black border border-white/20 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange transition-colors" id="sub-email" placeholder="tu@correo.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-semibold text-gray-400 mb-1">Teléfono</label>
+<input class="w-full bg-brand-black border border-white/20 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange transition-colors" id="sub-phone" placeholder="322 123 4567" required="" type="tel"/>
+</div>
+<div class="md:col-span-3 pt-2">
+<button class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white py-3.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-orange/20 hover:scale-[1.01] active:scale-[0.99] cursor-pointer" type="submit">
+              Confirmar Suscripción Gratuita
+            </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- FOOTER INSTITUCIONAL -->
+<footer class="bg-black border-t border-white/10 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-brand-card border gold-border p-2 flex items-center justify-center flex-shrink-0">
+<img alt="Logo D'inbound Marketing" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDZ9ThXaBmtZ0SXnmNe4lzLc5lwW9MzdEAAHbpZ2v9IGVGedRHmmjv3-6Q9yCJjuSdU2Acns1mBLE5zU2AEYs8pcQdISGnBhd_HMRzdHlDjssLmTFe5G8QVaiVYgITLJwnTwFBBwXTRk9IxlEaiEUA7B7qeUDDrQjGEZJFBpcq5DChHVMHdMBw4luu4iHZ37xGsjx66V4On7q98R8lAkgpT-cis6E3wPLYp52h0Q224_uO9QdJrpjER';" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div>
+<h4 class="font-display font-bold text-lg text-white">D'inbound Marketing</h4>
+<p class="text-sm text-gray-400">Guadalajara · Jalisco · México</p>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-xs uppercase tracking-widest text-gray-400">Línea Directa y WhatsApp</p>
+<a class="text-xl font-display font-bold text-brand-gold hover:text-white transition-colors block" href="https://wa.me/523223190424" rel="noopener noreferrer" target="_blank">
+            TEL 3223190424
+          </a>
+<p class="text-xs text-gray-500">+52 322 319 0424</p>
+</div>
+<div class="md:text-right">
+<p class="text-base italic font-serif text-brand-goldLight">
+            ¡Suma valor a tu contenido de vida!
+          </p>
+<p class="text-xs text-gray-500 mt-1">
+            © 2026 What's Up Sales Apps. Todos los derechos reservados.
+          </p>
+</div>
+</div>
+</div>
+</footer>
+<!-- MOBILE BOTTOM BAR (PARA NAVEGACIÓN EN SMARTPHONES) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-t border-white/10 px-3 py-2">
+<div class="grid grid-cols-5 gap-1 text-center">
+<button class="mob-btn flex flex-col items-center justify-center py-1 text-brand-orange" id="mob-inicio" onclick="navigateTo('inicio')">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="text-[9px] font-bold mt-0.5">Inicio</span>
+</button>
+<button class="mob-btn flex flex-col items-center justify-center py-1 text-gray-400" id="mob-agencia" onclick="navigateTo('agencia')">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+<span class="text-[9px] font-medium mt-0.5">Agencia</span>
+</button>
+<button class="mob-btn flex flex-col items-center justify-center py-1 text-gray-400" id="mob-keepup" onclick="navigateTo('keepup')">
+<span class="material-symbols-outlined text-[20px]">article</span>
+<span class="text-[9px] font-medium mt-0.5">Keep Up</span>
+</button>
+<button class="mob-btn flex flex-col items-center justify-center py-1 text-gray-400" id="mob-academia" onclick="navigateTo('academia')">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<span class="text-[9px] font-medium mt-0.5">Academia</span>
+</button>
+<button class="mob-btn flex flex-col items-center justify-center py-1 text-gray-400" id="mob-tienda" onclick="navigateTo('tienda')">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="text-[9px] font-medium mt-0.5">Tienda</span>
+</button>
+</div>
+</nav>
+<!-- SCRIPT ROUTER SPA (COMPATIBLE CON GITHUB PAGES) -->
+<script>
+    const validPages = ['inicio', 'agencia', 'keepup', 'academia', 'tienda'];
+
+    function navigateTo(pageId, updateHash = true) {
+      if (!validPages.includes(pageId)) {
+        pageId = 'inicio';
+      }
+
+      // 1. Ocultar todas las páginas
+      document.querySelectorAll('.page-section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+
+      // 2. Mostrar la página seleccionada
+      const targetSec = document.getElementById('page-' + pageId);
+      if (targetSec) {
+        targetSec.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // 3. Sincronizar botones de menú de escritorio
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('text-brand-orange', 'font-bold');
+        btn.classList.add('text-gray-300');
+      });
+      const activeNavBtn = document.getElementById('nav-' + pageId);
+      if (activeNavBtn) {
+        activeNavBtn.classList.remove('text-gray-300');
+        activeNavBtn.classList.add('text-brand-orange', 'font-bold');
+      }
+
+      // 4. Sincronizar botones móviles inferiores
+      document.querySelectorAll('.mob-btn').forEach(btn => {
+        btn.classList.remove('text-brand-orange', 'font-bold');
+        btn.classList.add('text-gray-400');
+      });
+      const activeMobBtn = document.getElementById('mob-' + pageId);
+      if (activeMobBtn) {
+        activeMobBtn.classList.remove('text-gray-400');
+        activeMobBtn.classList.add('text-brand-orange', 'font-bold');
+      }
+
+      // 5. Actualizar URL con hash para permitir recarga, favoritos y compartir en GitHub Pages
+      if (updateHash) {
+        window.location.hash = '#' + pageId;
+      }
+    }
+
+    // Router por hash: permite que los links directos tipo mi-sitio.github.io/#tienda funcionen
+    function handleHashChange() {
+      const hash = window.location.hash.replace('#', '').trim();
+      if (hash && validPages.includes(hash)) {
+        navigateTo(hash, false);
+      } else {
+        navigateTo('inicio', false);
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('DOMContentLoaded', handleHashChange);
+
+    // Manejo de formulario de suscripción
+    function handleSubscription(e) {
+      e.preventDefault();
+      const name = document.getElementById('sub-name').value;
+      const phone = document.getElementById('sub-phone').value;
+      alert(`¡Gracias ${name}! Tu solicitud para el capítulo de cortesía ha sido registrada con éxito.`);
+      
+      // Opcional: abrir WhatsApp para confirmar
+      const confirmMsg = encodeURIComponent(`Hola Dennys Douglas, me acabo de registrar para el e-book de cortesía. Mi nombre es: ${name} y teléfono: ${phone}`);
+      const askWa = confirm('¿Deseas enviar tu confirmación directamente a Dennys Douglas por WhatsApp?');
+      if (askWa) {
+        window.open(`https://wa.me/523223190424?text=${confirmMsg}`, '_blank');
+      }
+      e.target.reset();
+    }
+
+    // Audio demo en Keep Up
+    function playAudioSnippet() {
+      const btnText = document.getElementById('podcast-status');
+      btnText.textContent = '▶ Reproduciendo Píldora Táctica (2:00)...';
+      setTimeout(() => {
+        alert('Píldora: "Desarmando la objeción de precio". Regla clave: Si no hay contraste de dolor, el cliente sólo compara números.');
+        btnText.textContent = 'Escuchar audio de 2 minutos';
+      }, 500);
+    }
+  </script>
+</body>
+</html>
