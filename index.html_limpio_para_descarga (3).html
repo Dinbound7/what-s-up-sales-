@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's Up Sales Apps · D'inbound Marketing</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFBF7',
+              white: '#FFFFFF',
+              black: '#0D0E12',
+              dark: '#14171F',
+              card: '#1A1E29',
+              orange: '#EA580C',
+              orangeHover: '#C2410C',
+              gold: '#D4AF37',
+              goldLight: '#F5E6BE'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0D0E12;
+      color: #FDFBF7;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF1D0 0%, #D4AF37 50%, #AA8010 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border {
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-brand-black text-brand-cream selection:bg-brand-orange selection:text-white">
+
+  <!-- NAVEGACIÓN SUPERIOR / HEADER -->
+  <header class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO CORPORATIVO & MARCA -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-xl bg-black border gold-border flex items-center justify-center p-1.5 shadow-lg shadow-black/50 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtUGEKzyS--qsrZRMv8IrADLBgOTS8DYVAga0BfpUoq6TZTu6IV8yZG_b7WsJoGbDD64eEQynCxwo8CnlkD3Ex_8EA34xsnhkIOrYqBqu5E2FhGRTkd1rdfXBpekt6kzEwYAK5QsqsR30mmh3YGwqyIOe9-LdfMetuu6O-F5S2tpTdhFMcxXtYrOJxcvMSdIUEBhBjQL1_j5-J2wxDOCxmCNyODHMGa1WrtDo-Zr4FeHUMnGhH7zlT" alt="D'inbound Marketing Logo Oficial" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg tracking-wider text-white group-hover:text-brand-orange transition-colors">
+            WHAT'S UP SALES APPS
+          </span>
+          <span class="text-xs uppercase tracking-widest gold-gradient-text font-semibold">
+            D'inbound Marketing · Dennys Douglas
+          </span>
+        </div>
+      </a>
+
+      <!-- ENLACES DE NAVEGACIÓN -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#inicio" class="text-brand-orange transition-colors">Inicio</a>
+        <a href="#agencia" class="text-gray-300 hover:text-brand-gold transition-colors">D'inbound Marketing</a>
+        <a href="#keepup" class="text-gray-300 hover:text-brand-gold transition-colors">Keep Up</a>
+        <a href="#academia" class="text-gray-300 hover:text-brand-gold transition-colors">D'inbound Academy</a>
+        <a href="#tienda" class="text-gray-300 hover:text-brand-gold transition-colors">Tienda</a>
+      </nav>
+
+      <!-- BOTÓN WHATSAPP OFICIAL -->
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/523223190424?text=Hola%20Dennys%20Douglas,%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20What's%20Up%20Sales%20Apps" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg shadow-brand-orange/20 hover:scale-105 active:scale-95">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>WhatsApp: 322 319 0424</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex-1">
+
+    <!-- SECCIÓN HERO / INICIO -->
+    <section id="inicio" class="relative pt-12 pb-20 md:py-24 border-b border-white/5 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,88,12,0.12),transparent_50%)]"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- TEXTO PRINCIPAL -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card border gold-border text-xs tracking-wider uppercase">
+              <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+              <span class="gold-gradient-text font-bold">Top #1 Bestseller en Estrategia Comercial</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+              ¿Y tus ventas qué? <br>
+              <span class="gold-gradient-text">What's Up With Your Sales?</span>
+            </h1>
+
+            <p class="text-xl font-medium text-brand-orange">
+              Don't lose your street smarts!
+            </p>
+
+            <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+              Bienvenido a la plataforma definitiva de negociación, inbound marketing y cierre táctico por <strong>Dennys Douglas</strong>. Transforma el flujo de prospectos de tu organización en rentabilidad blindada.
+            </p>
+
+            <!-- MÉTRICAS CLAVE -->
+            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10 max-w-lg">
+              <div>
+                <p class="text-2xl sm:text-3xl font-display font-bold text-white">97.8%</p>
+                <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Efectividad</p>
+              </div>
+              <div>
+                <p class="text-2xl sm:text-3xl font-display font-bold text-white">6 Módulos</p>
+                <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Video Pro</p>
+              </div>
+              <div>
+                <p class="text-2xl sm:text-3xl font-display font-bold text-white">+1,400</p>
+                <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Alumnos</p>
+              </div>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN RÁPIDA -->
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="https://mpago.li/2muarZ1" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white px-7 py-3.5 rounded-xl font-bold text-base transition-all shadow-xl shadow-brand-orange/25 hover:scale-105">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span>Comprar Libro ($17 USD)</span>
+              </a>
+              <a href="#tienda" 
+                 class="inline-flex items-center gap-2 bg-brand-card hover:bg-white/10 border gold-border text-brand-cream px-6 py-3.5 rounded-xl font-semibold text-base transition-all">
+                <span class="material-symbols-outlined text-brand-gold">menu_book</span>
+                <span>Ver Formatos Amazon ($13 USD)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- PORTADA DEL LIBRO / CARD DESTACADA -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-sm rounded-2xl bg-brand-card border gold-border p-6 shadow-2xl shadow-black/80 text-center">
+              <div class="rounded-xl overflow-hidden shadow-2xl border border-white/10 mb-6 bg-black flex justify-center items-center">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7h8h69qVZCwVrFLWjPvBQGnlsSbbOfbCGH-bvQi7T9SN9t7xMHB-AUwVjTXyzaTgz27LKw18t9UZAGaqrOqc7qEWnkA-gXmnde65d-EXz8ur6neESRKFC7_3pEbraqVMb36DQAVzxkG0xX2Gfp2_6pWaVUv1MSA2KmPYFp3EMQDGeF3MhoHf658CPPCgcPFsC1gSRI9vhi9qFmkCvgz4wonW_8v_DAvumqKgMkL3CVE_1-k81n9TI" alt="Portada Oficial del Libro What's Up With Your Sales?" class="w-full h-auto max-h-[420px] object-contain">
+              </div>
+              <h3 class="text-xl font-display font-bold text-white mb-1">Edición Oficial 2026</h3>
+              <p class="text-sm text-gray-400 mb-4">El manual definitivo de algoritmos conversacionales y relaciones públicas comerciales.</p>
+              
+              <div class="flex items-center justify-center gap-3">
+                <a href="https://mpago.li/2muarZ1" target="_blank" rel="noopener noreferrer" class="flex-1 bg-brand-orange hover:bg-brand-orangeHover text-white py-2.5 rounded-lg text-sm font-bold transition-colors">
+                  Mercado Pago ($17)
+                </a>
+                <a href="https://a.co/d/00yxhmBZ" target="_blank" rel="noopener noreferrer" class="flex-1 bg-black hover:bg-brand-dark border border-white/20 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors">
+                  Amazon ($13)
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN TIENDA OFICIAL (MERCADO PAGO & AMAZON) -->
+    <section id="tienda" class="py-20 border-b border-white/5 bg-brand-dark/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest gold-gradient-text font-bold">Catálogo Oficial</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mt-2">
+            Elige tu formato y cómpralo hoy
+          </h2>
+          <p class="text-gray-400 mt-4 text-base">
+            Garantía de entrega inmediata y acceso prioritario a la comunidad de ventas de D'inbound.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- OPCIÓN 1: MERCADO PAGO COMPLETO -->
+          <div class="rounded-2xl bg-brand-card border-2 border-brand-orange p-8 flex flex-col justify-between relative shadow-2xl shadow-brand-orange/10">
+            <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
+              Recomendado
+            </span>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="material-symbols-outlined text-brand-orange text-3xl">auto_stories</span>
+                <span class="text-3xl font-display font-extrabold text-white">$17 <span class="text-sm font-normal text-gray-400">USD</span></span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Pack Oficial Mercado Pago</h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                Acceso directo al libro, material táctico complementario y canal exclusivo de seguimiento.
+              </p>
+              <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-orange text-sm">check_circle</span>
+                  <span>Descarga inmediata asegurada</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-orange text-sm">check_circle</span>
+                  <span>Pasarela segura con Mercado Pago</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-orange text-sm">check_circle</span>
+                  <span>Atención directa por WhatsApp</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://mpago.li/2muarZ1" target="_blank" rel="noopener noreferrer" 
+               class="w-full text-center bg-brand-orange hover:bg-brand-orangeHover text-white py-3 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-orange/20">
+              Comprar por $17 USD
+            </a>
+          </div>
+
+          <!-- OPCIÓN 2: AMAZON EBOOK -->
+          <div class="rounded-2xl bg-brand-card border gold-border p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="material-symbols-outlined text-brand-gold text-3xl">tablet_android</span>
+                <span class="text-3xl font-display font-extrabold text-white">$13 <span class="text-sm font-normal text-gray-400">USD</span></span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Amazon Kindle E-Book</h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                Lee en cualquier momento desde tu Kindle, iPad, tablet o smartphone en formato digital optimizado.
+              </p>
+              <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+                  <span>Sincronización WhisperSync</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+                  <span>Lectura instantánea tras la compra</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+                  <span>Disponible en todo el mundo</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://www.amazon.com/kindle-dbs/ku2?passThroughAsin=B0HPF5WJ33&ref=dbs_p_ebk_r00_pbcb_diupu0" target="_blank" rel="noopener noreferrer" 
+               class="w-full text-center bg-black hover:bg-brand-card border border-white/20 text-white py-3 rounded-xl font-bold text-sm transition-all">
+              Ver E-book en Amazon ($13 USD)
+            </a>
+          </div>
+
+          <!-- OPCIÓN 3: AMAZON TAPA BLANDA -->
+          <div class="rounded-2xl bg-brand-card border gold-border p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="material-symbols-outlined text-brand-gold text-3xl">menu_book</span>
+                <span class="text-3xl font-display font-extrabold text-white">$13 <span class="text-sm font-normal text-gray-400">USD</span></span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Edición Física Tapa Blanda</h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                El libro impreso de alta calidad para subrayar, tomar notas tácticas y tenerlo siempre en tu escritorio.
+              </p>
+              <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+                  <span>Envío directo a tu puerta con Amazon</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+                  <span>Garantía de impresión y entrega</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-sm">check_circle</span>
+                  <span>Ideal para equipos comerciales</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://a.co/d/00yxhmBZ" target="_blank" rel="noopener noreferrer" 
+               class="w-full text-center bg-black hover:bg-brand-card border border-white/20 text-white py-3 rounded-xl font-bold text-sm transition-all">
+              Ver Tapa Blanda en Amazon ($13 USD)
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO DE SUSCRIPCIÓN GRATUITA (E-BOOK DE CORTESÍA) -->
+    <section class="py-16 bg-brand-card border-b border-white/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <span class="text-xs uppercase tracking-widest text-brand-orange font-bold">Acceso Exclusivo Sin Costo</span>
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mt-1">
+            Subscríbete gratis aquí:
+          </h2>
+          <p class="text-gray-400 text-sm mt-2">
+            Recibe el capítulo introductorio de cortesía y las actualizaciones periódicas de Dennys Douglas.
+          </p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('¡Gracias por registrarte! Te enviaremos el material de cortesía.');" 
+              class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs uppercase font-semibold text-gray-400 mb-1">Nombre</label>
+            <input type="text" required placeholder="Tu nombre completo" 
+                   class="w-full bg-brand-black border border-white/20 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+          </div>
+          <div>
+            <label class="block text-xs uppercase font-semibold text-gray-400 mb-1">Correo</label>
+            <input type="email" required placeholder="tu@correo.com" 
+                   class="w-full bg-brand-black border border-white/20 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+          </div>
+          <div>
+            <label class="block text-xs uppercase font-semibold text-gray-400 mb-1">Teléfono</label>
+            <input type="tel" required placeholder="322 123 4567" 
+                   class="w-full bg-brand-black border border-white/20 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+          </div>
+          <div class="md:col-span-3 pt-2">
+            <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white py-3.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-orange/20">
+              Confirmar Suscripción Gratuita
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA INSTITUCIONAL CORPORATIVO -->
+  <footer class="bg-black border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+        
+        <!-- IDENTIDAD Y LOGO -->
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-brand-card border gold-border p-2 flex items-center justify-center">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtUGEKzyS--qsrZRMv8IrADLBgOTS8DYVAga0BfpUoq6TZTu6IV8yZG_b7WsJoGbDD64eEQynCxwo8CnlkD3Ex_8EA34xsnhkIOrYqBqu5E2FhGRTkd1rdfXBpekt6kzEwYAK5QsqsR30mmh3YGwqyIOe9-LdfMetuu6O-F5S2tpTdhFMcxXtYrOJxcvMSdIUEBhBjQL1_j5-J2wxDOCxmCNyODHMGa1WrtDo-Zr4FeHUMnGhH7zlT" alt="Logo D'inbound Marketing" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-lg text-white">D'inbound Marketing</h4>
+            <p class="text-sm text-gray-400">Guadalajara · Jalisco · México</p>
+          </div>
+        </div>
+
+        <!-- CONTACTO OFICIAL -->
+        <div class="space-y-1">
+          <p class="text-xs uppercase tracking-widest text-gray-400">Línea Directa y WhatsApp</p>
+          <a href="https://wa.me/523223190424" target="_blank" rel="noopener noreferrer" 
+             class="text-xl font-display font-bold text-brand-gold hover:text-white transition-colors block">
+            TEL 3223190424
+          </a>
+          <p class="text-xs text-gray-500">+52 322 319 0424</p>
+        </div>
+
+        <!-- LEMA OFICIAL -->
+        <div class="md:text-right">
+          <p class="text-base italic font-serif text-brand-goldLight">
+            ¡Suma valor a tu contenido de vida!
+          </p>
+          <p class="text-xs text-gray-500 mt-1">
+            © 2026 What's Up Sales Apps. Todos los derechos reservados.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
